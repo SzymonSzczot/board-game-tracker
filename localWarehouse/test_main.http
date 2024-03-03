@@ -1,0 +1,19 @@
+# Test your FastAPI endpoints
+
+GET http://127.0.0.1:8000/warehouse/locaddtions
+Accept: application/json
+
+
+###
+GET http://127.0.0.1:8000/warehouse/locations/c83b9d2b-0974-4da5-825d-03eabd52258a
+Accept: application/json
+
+### Utwórz lokację
+
+POST http://127.0.0.1:8000/warehouse/locations
+Accept: application/json
+Content-Type: application/json
+
+{"name": "L32"}
+
+###

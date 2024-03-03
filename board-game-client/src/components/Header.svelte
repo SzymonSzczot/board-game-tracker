@@ -14,31 +14,34 @@
 
 <script>
     import Timer from './Timer.svelte'
-    import RoundOrder from "./RoundOrder.svelte";
     let name = "Szymon";
     let time1 = "10:10"
     let time2 = "11:11"
     let time3 = "33:33"
 
-    let players = [
-        {"name": "Szymon", "isCurrent": false},
-        {"name": "Agata", "isCurrent": true},
-        {"name": "Michał", "isCurrent": false},
-    ]
-
-    let currentRoundTime = "1:01"
 
 </script>
 
 <div class="container text-center">
   <div class="row align-items-center">
-    <div class="col align-items-center" style="display: flex; max-width: 20%">
-        <div id="playerName" class="p-3">{name}</div>
+    <div class="col-sm-12 col-md-6 col-lg-4">
+      <div id="playerName" class="p-3">
+        {name}
+        <div>Miejsce 1</div>
+      </div>
     </div>
-    <div class="col">
-      <Timer time={time1}></Timer>
-      <Timer time={time2}></Timer>
-      <Timer time={time3}></Timer>
+    <div class="col-sm-12 col-md-6 col-lg-8">
+      <div class="row">
+        <div class="col-sm-4">
+          <Timer time={time1} description="Czas gry"></Timer>
+        </div>
+        <div class="col-sm-4">
+          <Timer time={time2} description="Twój czas"></Timer>
+        </div>
+        <div class="col-sm-4">
+          <Timer time={time3} description="Tura"></Timer>
+        </div>
+      </div>
     </div>
   </div>
 </div>
